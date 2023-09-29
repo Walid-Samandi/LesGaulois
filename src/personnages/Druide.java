@@ -2,6 +2,8 @@ package personnages;
 
 import java.util.Random;
 
+import com.sun.xml.internal.ws.api.pipe.NextAction;
+
 public class Druide {
 	private String nom;
 	private int effetPotionMin;
@@ -19,19 +21,18 @@ public class Druide {
 	
 	
 	private int preparerPotion() {
-		Random random;
-		forcePotion=random;
+		Random random= new Random();
+		forcePotion =random.nextInt(effetPotionMax)+1;
 		if (forcePotion > 7) {
-			parler("J\"ai préparé une super potion de force");
+			parler("J\"ai préparé une super potion de force" + forcePotion + "!");
 			return forcePotion;
 		}else {
 			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force" + 
 		forcePotion + ".");
+			return forcePotion;
 		}
 	}
-	private int nextInt(int effetPotionMax){
-		return random;
-	}
+
 	public String getNom() {
 		return nom;
 	}
