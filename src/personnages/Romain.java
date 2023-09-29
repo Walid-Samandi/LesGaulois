@@ -38,6 +38,27 @@ public class Romain {
 //		equipements[nbEquipement]=equipement;
 //		nbEquipement++;
 	
+	
+//	public void sEquiper(Equipement equipements){
+//		switch(nbEquipement) {
+//		case 2:
+//			System.out.println("Le soldat " + nom +" est!");
+//			break;
+//		case 1:
+//			if (equipement[0] == equipements) {
+//				System.out.println("Le soldat " + nom +"  un " + equipements +" !");
+//				break;
+//			}
+//			else {
+//				ajouterEquipement(equipements);
+//			}
+//			break;
+//		case 0:
+//			ajouterEquipement(equipements);	
+//			break;
+//	 }
+//	}
+	
 	public static void main(String[] args) {
 		Romain maximus=new Romain("Maximus", 4);
 		maximus.parler("Je n'aime pas les gaulois.");
